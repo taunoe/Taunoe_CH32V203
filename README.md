@@ -2,6 +2,10 @@
 
 Here I will start to develop my CH32V203 development boards and collect all related materials.
 
+## Code
+
+[Example code](./Example_code/README.md)
+
 ## WCH Docs
 
 - [CH32V203 Datasheet](doc/CH32V203DS0.PDF)
