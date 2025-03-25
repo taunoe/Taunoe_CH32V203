@@ -20,11 +20,25 @@ Here I will start to develop my CH32V203 development boards and collect all rela
 
 ## CH32V203F6P6
 
+Chip size:
+
 ![TSSOP20](img/TSSOP20.png)
+
+Pinout:
+
+![Pinout](img/pinout_ch32v203f6p6.png)
+
+My schematics
+
+![schematicss](img/Screenshot%20from%202025-03-25%2021-48-44.png)
 
 ## CH32V203C8T6
 
+Chip size:
+
 ![LQFP48](img/LQFP48.png)
+
+![Pinout](img/pinout_ch32v203c8t6.png)
 
 _______________
 Tauno Erik ♥ Väimela ♥ 2025
