@@ -28,7 +28,7 @@ Pinout:
 
 ![Pinout](img/pinout_ch32v203f6p6.png)
 
-My schematics
+My board schematics
 
 ![schematicss](img/Screenshot%20from%202025-03-25%2021-48-44.png)
 
