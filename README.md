@@ -32,6 +32,10 @@ My board schematics
 
 ![schematicss](img/Screenshot%20from%202025-03-25%2021-48-44.png)
 
+My board pinout:
+
+![Pinout](pinout/pinout.png)
+
 ## CH32V203C8T6
 
 Chip size:
