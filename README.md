@@ -34,7 +34,11 @@ My board schematics
 
 My board pinout:
 
-![Pinout](pinout/pinout.png)
+![Pinout](pinout/pinout_photo.png)
+
+![Pinout](pinout/front_photo.png)
+
+![Pinout](pinout/back_photo.png)
 
 ## CH32V203C8T6
 
