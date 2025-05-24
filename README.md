@@ -20,6 +20,8 @@ Here I will start to develop my CH32V203 development boards and collect all rela
 
 ## CH32V203F6P6
 
+Chip ID: 20370510
+
 Chip size:
 
 ![TSSOP20](img/TSSOP20.png)
@@ -40,13 +42,25 @@ My board pinout:
 
 ![Pinout](pinout/back_photo.png)
 
+### UART
+
+TX -> PA3
+RX -> PA2
+
 ## CH32V203C8T6
+
+ChipID: 20310500
 
 Chip size:
 
 ![LQFP48](img/LQFP48.png)
 
 ![Pinout](img/pinout_ch32v203c8t6.png)
+
+## UART
+
+TX -> PA10 = A10 (WeActStudio Blue Pill Plus)
+RX -> PA9  = A9 (WeActStudio Blue Pill Plus)
 
 _______________
 Tauno Erik ♥ Väimela ♥ 2025
