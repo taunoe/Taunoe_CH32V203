@@ -1,27 +1,18 @@
 /********************************** (C) COPYRIGHT *******************************
  * File Name          : main.c
- * Author             : WCH
- * Version            : V1.0.0
- * Date               : 2021/06/06
- * Description        : Main program body.
- *********************************************************************************
- * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
- * Attention: This software (modified or not) and binary are used for 
- * microcontroller manufactured by Nanjing Qinheng Microelectronics.
- *******************************************************************************/
+ * Author             : Tauno Erik
+ * Date               : 2025-05-25
+ * Description        : VTF IRQ interrupt routine
+ *********************************************************************************/
 
-/*
- *@Note
- *VTF IRQ interrupt routine:
- *This example is used to demonstrate VTF IRQ
- */
+
 #include "debug.h"
 
 /* Global define */
 
 
 /* Global Variable */ 
-uint32_t time=0;
+uint32_t loendur = 0;
 
 void SysTick_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 
@@ -35,7 +26,7 @@ void SysTick_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 void Interrupt_VTF_Init(void)
 {
     NVIC_EnableIRQ(SysTicK_IRQn);
-    SetVTFIRQ((u32)SysTick_Handler,SysTicK_IRQn,0,ENABLE);
+    SetVTFIRQ((u32)SysTick_Handler, SysTicK_IRQn, 0, ENABLE);
 }
 
 /*********************************************************************
@@ -47,10 +38,11 @@ void Interrupt_VTF_Init(void)
  */
 void Systick_Init(void)
 {
-    SysTick->SR=0;
-    SysTick->CNT=0;
-    SysTick->CMP=0x20;
-    SysTick->CTLR=0x7;
+    SysTick->SR=0;     // Clears SysTick Status Register 
+    SysTick->CNT=0;    // Sets counter to 0
+    SysTick->CMP=0xFFFFFF; //0x20; // Sets the Compare Register to 0x20 == 32. Timer counts town from 0x20 to 0
+    SysTick->CTLR=0xf; //0x7; // Sets the Control Register (CTLR) to 0x7 (binary 0b111)
+    // if 0x7 it runs only once
 }
 
 /*********************************************************************
@@ -71,9 +63,9 @@ int main(void)
 	Interrupt_VTF_Init();
 	Systick_Init();
     while(1)
-   {
-
-   }
+    {
+        
+    }
 }
 
 /*********************************************************************
@@ -85,10 +77,10 @@ int main(void)
  */
 void SysTick_Handler(void)
 {
-    time=SysTick->CNT;
-    SysTick->CTLR=0;
-    SysTick->SR=0;
-    printf("delta time:%d\r\n",time-0x20);
+    //time=SysTick->CNT;
+    //SysTick->CTLR=0; // disables the SysTick timer by clearing its Control Register
+    SysTick->SR = 0;  // Clear SysTick staus register
+    //printf("delta time:%d\r\n", time-0x20);
+    loendur++;
+    printf("%u\r\n", loendur);
 }
-
-
