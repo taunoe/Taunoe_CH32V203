@@ -44,8 +44,8 @@ My board pinout:
 
 ### UART
 
-TX -> PA3
-RX -> PA2
+* TX -> PA3
+* RX -> PA2
 
 ## CH32V203C8T6
 
@@ -59,8 +59,8 @@ Chip size:
 
 ## UART
 
-TX -> PA10 = A10 (WeActStudio Blue Pill Plus)
-RX -> PA9  = A9 (WeActStudio Blue Pill Plus)
+* TX -> PA10 = A10 (WeActStudio Blue Pill Plus)
+* RX -> PA9  = A9 (WeActStudio Blue Pill Plus)
 
 _______________
 Tauno Erik ♥ Väimela ♥ 2025
