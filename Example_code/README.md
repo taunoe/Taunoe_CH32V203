@@ -435,6 +435,10 @@ SDI Printf refers to a method of printing debug messages or log information usin
 
 ## USB
 
+* USB Device
+
+* USB Full-Speed
+
 [USB/USBD/CH372/](USB/USBD/CH372/) - Simulates a custom USB device (CH372 device) with endpoints 1, 3 down and 2, 4 up. Data down from endpoint 1 is uploaded from endpoint 3 and not reversed, and data down from endpoint 2 is uploaded from endpoint 4 and reversed.
 
 [USB/USBD/Compatibility_HID/](USB/USBD/Compatibility_HID/) - Simulates HID devices, with data transmitted up and down through the serial port.
